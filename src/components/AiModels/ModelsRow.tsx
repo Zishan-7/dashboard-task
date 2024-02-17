@@ -28,13 +28,13 @@ const ModelsRow = ({ license, name, rating, version, logo }: ModelsRowi) => {
         {Array(rating)
           .fill("")
           .map((_, i) => (
-            <StarIcon isFilled />
+            <StarIcon key={i} isFilled />
           ))}
 
         {Array(5 - rating)
           .fill("")
           .map((_, i) => (
-            <StarIcon />
+            <StarIcon key={i} />
           ))}
       </span>
     </div>

@@ -22,7 +22,6 @@ const ColorPicker = () => {
         <HuePicker
           color={color}
           onChange={(selectedColor) => {
-            console.log(selectedColor.hex);
             updateColor(selectedColor.hex);
           }}
           className="rounded-full"
@@ -32,6 +31,7 @@ const ColorPicker = () => {
       <div className="w-[70%] h-9 bg-[#26252A] rounded-full flex gap-x-2 items-center px-2">
         {colorShades.map((shade) => (
           <div
+            key={shade}
             className="w-[10%]  rounded-full h-3"
             style={{
               backgroundColor: shade,
