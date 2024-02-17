@@ -4,6 +4,7 @@ import { ScrollArea } from "../ui/scroll-area";
 import DropDown from "../DropDown";
 import ArrowDown from "@/assets/Icons/ArrowDown";
 import { Bard, ChatGpt, TensorFlow } from "@/assets/png";
+import { Accordion } from "@/components/ui/accordion";
 
 const Models = [
   {
@@ -79,17 +80,19 @@ const AiModels = () => {
         </div>
       </section>
 
-      <ScrollArea className="flex flex-col overflow-y-scroll h-full px-8">
-        {Models.map((model, i) => (
-          <ModelsRow
-            key={i}
-            name={model.name}
-            license={model.license}
-            version={model.version}
-            rating={model.rating}
-            logo={model.logo}
-          />
-        ))}
+      <ScrollArea className="flex flex-col overflow-y-scroll h-full ">
+        <Accordion type="multiple" className="w-full">
+          {Models.map((model, i) => (
+            <ModelsRow
+              key={i}
+              name={model.name}
+              license={model.license}
+              version={model.version}
+              rating={model.rating}
+              logo={model.logo}
+            />
+          ))}
+        </Accordion>
       </ScrollArea>
     </aside>
   );
