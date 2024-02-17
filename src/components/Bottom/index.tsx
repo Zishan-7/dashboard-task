@@ -20,11 +20,11 @@ const Bottom = () => {
           className="top-0 absolute overflow-hidden"
           direction="horizontal"
         >
-          <ResizablePanel defaultSize={50}>
+          <ResizablePanel defaultSize={55}>
             <div className="bg-[#652BFC61] w-full h-full"></div>
           </ResizablePanel>
-          <ResizableHandle className="h-9 w-[2px] rounded-md mt-auto mb-auto" />
-          <ResizablePanel defaultSize={50}>
+          <ResizableHandle className="h-10 w-[3px] rounded-md mt-auto mb-auto" />
+          <ResizablePanel defaultSize={45}>
             <div className="bg-transparent w-full h-full"></div>
           </ResizablePanel>
         </ResizablePanelGroup>
